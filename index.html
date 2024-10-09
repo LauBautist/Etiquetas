@@ -358,6 +358,28 @@
         font-size: 0.9em;
     }
 }
+        /* Asegura que el contenedor de los botones del menú no sobresalga */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+/* Ajusta las imágenes dentro del menú */
+.menu img {
+    max-width: 100%; /* Limita el ancho de la imagen al tamaño del contenedor */
+    height: auto;    /* Mantiene la proporción de la imagen */
+}
+
+/* Evita que los textos se desborden */
+.menu button {
+    white-space: nowrap;  /* Evita que el texto se divida en varias líneas */
+    overflow: hidden;     /* Oculta el desbordamiento del texto */
+    text-overflow: ellipsis; /* Añade '...' si el texto es demasiado largo */
+}
+
     </style>
 </head>
 
