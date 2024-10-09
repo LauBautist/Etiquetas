@@ -73,6 +73,41 @@
             background-color: #808080; /* Color más claro al pasar el ratón */
             transform: scale(1.05); /* Efecto de escala */
         }
+        /* Estilos generales (para pantallas grandes) están como los tienes ahora */
+
+/* Media query para pantallas más pequeñas (como móviles) */
+@media (max-width: 768px) {
+    body {
+        font-size: 1em; /* Tamaño de texto más pequeño */
+    }
+
+    header {
+        padding: 10px; /* Menos padding en encabezado */
+    }
+
+    .container {
+        padding: 10px; /* Menos espacio alrededor */
+    }
+
+    img {
+        max-width: 100%; /* Imagen ocupa todo el ancho disponible */
+    }
+
+    audio, video {
+        max-width: 100%; /* Video y audio ocupan todo el ancho disponible */
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    a {
+        width: 100%; /* El botón ocupa todo el ancho */
+        padding: 10px; /* Ajusta el tamaño del botón */
+    }
+}
+
     </style>
 </head>
 <body>
