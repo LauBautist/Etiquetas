@@ -122,7 +122,139 @@
             height: auto;
             margin-right: 8px;
         }
+           @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .imagenes {
+            width: 100%;
+            /* Asegura que el contenedor ocupa todo el ancho disponible */
+            display: flex;
+            flex-wrap: wrap;
+            /* Permite que las imágenes se ajusten en varias filas */
+            justify-content: center;
+            /* Centra las imágenes */
+            gap: 15px;
+            /* Espacio entre imágenes */
+            padding: 20px;
+        }
+
+        .imagenes img {
+            max-width: 100%;
+            /* Las imágenes no excederán el ancho del contenedor */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+            border-radius: 10px;
+            /* Bordes redondeados para un mejor estilo */
+            width: 250px;
+            /* Cambia este valor según tus necesidades */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #ejemplos {
+            padding: 20px;
+            /* Espacio interno */
+        }
+
+        #ejemplos img {
+            max-width: 100%;
+            /* Las imágenes no exceden el ancho del contenedor */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+            border-radius: 10px;
+            /* Opcional: bordes redondeados */
+            margin: 10px 0;
+            /* Espacio entre imágenes */
+        }
+
+        #sintaxis {
+            padding: 20px;
+            /* Espacio interno */
+        }
+
+        #sintaxis img {
+            max-width: 100%;
+            /* Las imágenes no exceden el ancho del contenedor */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+            border-radius: 10px;
+            /* Opcional: bordes redondeados */
+            margin: 10px 0;
+            /* Espacio entre imágenes */
+        }
     </style>
+    
 </head>
 
 <body>
