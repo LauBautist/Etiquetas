@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        section p,
+        section ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        nav img {
+            vertical-align: middle;
+            width: 40px;
+            height: auto;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <button>
+            <h1>Fundamentos de CSS</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#fundamentos-css-modelo-caja-layout">Fundamentos, Modelo de Caja y Layout</a>
+        <a href="#texto-colores-fondos-multimedia">Texto, Colores y Multimedia</a>
+        <a href="#transiciones-animaciones-avanzados">Transiciones, Animaciones y Estilos Avanzados</a>
+        <a href="#frameworks-accesibilidad-optimizacion">Frameworks, Accesibilidad y Optimización</a>
+        <a href="Tablas.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Enlaces.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+    </nav>
+
+    <!-- Fundamentos de CSS, Modelo de Caja y Layout -->
+    <section id="fundamentos-css-modelo-caja-layout">
+        <h1>1. Fundamentos de CSS, Modelo de Caja y Layout</h1>
+        <p>
+            CSS (Cascading Style Sheets) es el lenguaje utilizado para describir el estilo y el diseño de una página web.
+            Funciona junto con HTML para definir cómo se verá el contenido en una página.
+        </p>
+        <h3>Sintaxis de CSS</h3>
+        <p>La sintaxis básica de CSS incluye:</p>
+        <pre>
+selector {
+    propiedad: valor;
+}
+        </pre>
+        <p>
+            Los selectores especifican qué elementos HTML se van a estilizar, mientras que las propiedades y valores definen el estilo.
+        </p>
+
+        <h3>Modelo de Caja</h3>
+        <p>El Modelo de Caja es fundamental para entender cómo los elementos HTML son renderizados. Cada elemento se
+            representa como una caja que consta de márgenes, bordes, padding y el contenido.</p>
+        <pre>
+elemento {
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #333;
+}
+        </pre>
+
+        <h3>Diseño de Layout (Flexbox y Grid)</h3>
+        <p>Existen varias técnicas en CSS para crear diseños de páginas web responsivos. Dos de las más populares son Flexbox y Grid Layout.</p>
+
+        <h4>Ejemplo con Flexbox</h4>
+        <pre>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        </pre>
+
+        <h4>Ejemplo con Grid Layout</h4>
+        <pre>
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+        </pre>
+    </section>
+
+    <!-- Texto, Colores y Multimedia -->
+    <section id="texto-colores-fondos-multimedia">
+        <h1>2. Texto, Colores y Multimedia</h1>
+        <h3>Estilización de Texto</h3>
+        <p>CSS proporciona muchas propiedades para estilizar texto, como tamaño de fuente, color y alineación.</p>
+        <pre>
+p {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+        </pre>
+
+        <h3>Colores y Fondos</h3>
+        <p>En CSS puedes trabajar con colores en diferentes formatos: HEX, RGB, HSL, entre otros.</p>
+        <pre>
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+        </pre>
+
+        <h3>Imágenes y Multimedia</h3>
+        <p>Con CSS puedes ajustar el tamaño, bordes y sombras de las imágenes.</p>
+        <pre>
+img {
+    width: 100%;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+        </pre>
+        <p>También es posible establecer imágenes de fondo:</p>
+        <pre>
+body {
+    background-image: url('imagen.jpg');
+    background-size: cover;
+}
+        </pre>
+    </section>
+
+    <!-- Transiciones, Animaciones y Estilos Avanzados -->
+    <section id="transiciones-animaciones-avanzados">
+        <h1>3. Transiciones, Animaciones y Estilos Avanzados</h1>
+        <h3>Transiciones</h3>
+        <p>Las transiciones suavizan los cambios de estilo, permitiendo efectos animados.</p>
+        <pre>
+elemento {
+    transition: all 0.3s ease;
+}
+        </pre>
+
+        <h3>Animaciones</h3>
+        <p>Las animaciones permiten cambios más complejos.</p>
+        <pre>
+@keyframes movimiento {
+    from { transform: translateX(0); }
+    to { transform: translateX(100px); }
+}
+
+elemento {
+    animation: movimiento 2s infinite;
+}
+        </pre>
+
+        <h3>Estilos Avanzados</h3>
+        <p>CSS moderno permite el uso de pseudo-elementos, variables CSS y funciones como <code>:nth-child()</code>.</p>
+        <pre>
+elemento::before {
+    content: '→';
+    color: red;
+}
+
+:root {
+    --primary-color: #4CAF50;
+}
+
+elemento {
+    color: var(--primary-color);
+}
+        </pre>
+    </section>
+
+    <!-- Frameworks, Accesibilidad y Optimización -->
+    <section id="frameworks-accesibilidad-optimizacion">
+        <h1>4. Frameworks, Accesibilidad y Optimización</h1>
+        <h3>Frameworks CSS</h3>
+        <p>Frameworks como Bootstrap o Tailwind facilitan el desarrollo web al proporcionar componentes predefinidos.</p>
+
+        <h3>Accesibilidad en CSS</h3>
+        <p>La accesibilidad es crucial para garantizar que todos los usuarios, incluidas personas con discapacidades, puedan navegar por una página web.</p>
+        <pre>
+elemento {
+    font-size: 1.2em;
+    color: #333;
+}
+        </pre>
+
+        <h3>Optimización y Herramientas de Desarrollo</h3>
+        <p>Minificar y agrupar archivos CSS puede mejorar la velocidad de carga. Herramientas como Chrome DevTools permiten depurar CSS.</p>
+        <pre>
+/* Ejemplo de CSS minificado */
+body{background:#fff;color:#333;margin:0;}
+        </pre>
+    </section>
+
+    <footer>
+        <p>© 2024 - Fundamentos de CSS</p>
+    </footer>
+
+</body>
+
+</html>
