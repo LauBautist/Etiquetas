@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Mono</title>
+    <title>El Lobo</title>
     <style>
         body {
-            background-color: #f4f4f4; /* Fondo gris claro */
-            color: #333; /* Texto oscuro para mejor contraste */
-            font-family: 'Arial', sans-serif; /* Fuente simple y legible */
+            background-color: #a1a9a8; /* Fondo gris verdoso */
+            color: #333; /* Texto oscuro */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #6a0dad; /* Fondo púrpura oscuro */
+            background-color: #2f4f4f; /* Fondo gris oscuro */
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para el encabezado */
-            font-size: 2.5em;
-            border-bottom: 5px solid #4b0082; /* Borde inferior para un toque adicional */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para el encabezado */
+            border-bottom: 5px solid #1f3232; /* Borde inferior para más definición */
             border-radius: 0 0 20px 20px; /* Bordes redondeados en la parte inferior */
         }
 
+        h1 {
+            margin: 0;
+            font-size: 2.5em; /* Tamaño de fuente más grande para el encabezado */
+        }
+
         .container {
-            max-width: 1000px; /* Ancho máximo de la página */
+            max-width: 1000px; /* Ancho máximo del contenedor */
             margin: 20px auto; /* Centrando la página */
             padding: 20px;
             text-align: center;
+            background-color: white; /* Fondo blanco para el contenido */
             border-radius: 20px; /* Bordes redondeados */
-            background-color: white; /* Fondo blanco para la sección */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para la sección principal */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para el contenido */
         }
 
         img {
             width: 100%;
-            max-width: 600px; /* Ancho máximo de la imagen */
+            max-width: 500px; /* Ancho máximo de la imagen */
             height: auto;
             border-radius: 20px; /* Bordes redondeados */
             margin: 20px 0;
@@ -44,28 +48,17 @@
         }
 
         p {
-            font-size: 1.1em;
+            font-size: 1.2em;
             margin: 20px 0;
             line-height: 1.6;
-            text-align: justify;
-            padding: 0 10px; /* Padding horizontal para mejorar la legibilidad */
-            color: #555; /* Texto un poco más claro */
         }
 
         .media {
             margin: 30px 0;
             padding: 20px;
-            background-color: #e6e6fa; /* Fondo lavanda claro para la sección de media */
+            background-color: #f0f8ff; /* Fondo azul claro para la sección de media */
             border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para la sección de media */
-        }
-
-        audio {
-            width: 100%;
-            max-width: 400px; /* Ajustar el ancho del audio */
-            margin: 20px auto;
-            display: block;
-            /* Se eliminan los bordes del elemento de audio */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la sección de media */
         }
 
         video, iframe {
@@ -82,17 +75,15 @@
             display: inline-block;
             margin: 20px auto;
             padding: 12px 24px;
-            background-color: #4b0082; /* Botón índigo oscuro */
+            background-color: #2f4f4f; /* Botón gris oscuro */
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s, transform 0.3s; /* Transición suave */
-            font-weight: bold; /* Negrita para mayor visibilidad */
-            font-size: 1.1em; /* Aumentar tamaño de texto del botón */
         }
 
         a:hover {
-            background-color: #6a0dad; /* Color más claro al pasar el ratón */
+            background-color: #4f6f6f; /* Color más claro al pasar el ratón */
             transform: scale(1.05); /* Efecto de escala */
         }
 
@@ -103,6 +94,10 @@
                 font-size: 2em; /* Tamaño de fuente ajustado en tablets */
             }
 
+            h1 {
+                font-size: 2em; /* Tamaño de fuente más pequeño en dispositivos móviles */
+            }
+
             .container {
                 padding: 10px;
             }
@@ -111,13 +106,8 @@
                 max-width: 90%; /* Limitar ancho de imagen en tablets */
             }
 
-            p {
-                font-size: 1em; /* Ajustar tamaño de texto en tablets */
-            }
-
-            audio, video, iframe {
-                max-width: 90%; /* Limitar ancho multimedia en tablets */
-                height: auto; /* Ajuste automático de la altura */
+            a {
+                font-size: 1em; /* Ajustar tamaño de texto de enlaces en tablets */
             }
         }
 
@@ -126,45 +116,38 @@
                 font-size: 1.5em; /* Tamaño de fuente más grande en móviles */
             }
 
+            h1 {
+                font-size: 1.5em; /* Tamaño de fuente más pequeño en móviles */
+            }
+
             img {
                 max-width: 100%; /* Imagen ajustada al ancho completo en pantallas pequeñas */
             }
 
-            p {
-                font-size: 0.9em; /* Texto más pequeño en móviles */
-            }
-
-            audio, video, iframe {
-                max-width: 100%; /* Multimedia al 100% en móviles */
-                height: auto; /* Ajuste automático de la altura */
-            }
-
             a {
-                width: 100%; /* Botón ocupa todo el ancho */
-                text-align: center;
-                padding: 10px; /* Ajustar padding en móviles */
+                font-size: 0.9em; /* Texto más pequeño en móviles */
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>El Mono</h1>
+        <h1>El Lobo</h1>
     </header>
 
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ateles_fusciceps_Colombia.JPG/1200px-Ateles_fusciceps_Colombia.JPG" alt="Mono">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Canis_lupus_265b.jpg/220px-Canis_lupus_265b.jpg" alt="Lobo">
         
-        <p>El mono es un primate conocido por su inteligencia, agilidad y comportamiento social. Los monos son muy curiosos y son capaces de utilizar herramientas para conseguir alimentos y resolver problemas.</p>
-        <p>Los monos habitan en diversas partes del mundo, desde las selvas tropicales hasta las montañas, adaptándose a diferentes hábitats y climas.</p>
+        <p>El lobo es un carnívoro altamente social y uno de los animales más icónicos de la fauna salvaje. Es conocido por su aullido distintivo que utiliza para comunicarse con su manada.</p>
+        <p>Los lobos habitan en diversos hábitats alrededor del mundo, desde las tundras frías hasta los bosques templados. Son animales inteligentes y estratégicos en la caza.</p>
         
         <div class="media">
             <audio controls>
-                <source src="C:\Users\betog\OneDrive\Desktop\Web\Zoologico\monkey.mp3" type="audio/mpeg">
+                <source src="C:\Users\betog\OneDrive\Desktop\Web\Zoologico\lobo.mp3" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
             </audio>
-           
-            <iframe src="https://www.youtube.com/embed/aSGIxjjMwsw" frameborder="0" allowfullscreen></iframe>
+            
+            <iframe src="https://www.youtube.com/embed/5dlMy553Nqk" allowfullscreen></iframe>
         </div>
 
         <a href="zoologic.html">Volver al inicio</a>
