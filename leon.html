@@ -3,36 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El León</title>
+    <title>El Elefante</title>
     <style>
         body {
-            background-color: #f5deb3; /* Fondo color arena */
-            color: #333; /* Texto oscuro */
+            background-color: #e0e0e0; /* Fondo gris claro */
+            color: #333; /* Texto oscuro para mejor contraste */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #8b4513; /* Fondo marrón oscuro */
+            background-color: #696969; /* Fondo gris oscuro */
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para el encabezado */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para el encabezado */
+            border-bottom: 5px solid #474747; /* Borde inferior para un toque adicional */
+            border-radius: 0 0 20px 20px; /* Bordes redondeados en la parte inferior */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em; /* Tamaño de fuente más grande para el encabezado */
         }
 
         .container {
-            max-width: 1200px; /* Ancho máximo de la página */
-            margin: 0 auto; /* Centrando la página */
+            max-width: 1000px; /* Ancho máximo de la página */
+            margin: 20px auto; /* Centrando la página */
             padding: 20px;
             text-align: center;
+            background-color: white; /* Fondo blanco para el contenido */
+            border-radius: 20px; /* Bordes redondeados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para el contenido */
         }
 
         img {
             width: 100%;
             max-width: 500px; /* Ancho máximo de la imagen */
             height: auto;
-            border-radius: 15px; /* Bordes redondeados */
+            border-radius: 20px; /* Bordes redondeados */
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
         }
@@ -46,23 +56,27 @@
         .media {
             margin: 30px 0;
             padding: 20px;
-            background-color: #fff5ee; /* Fondo claro para la sección de media */
+            background-color: #f0f0f0; /* Fondo más claro para la sección de media */
             border-radius: 10px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la sección de media */
         }
 
-        audio, video {
+        video, iframe {
             width: 100%;
-            max-width: 700px; /* Ancho máximo para los elementos de audio y video */
+            max-width: 700px; /* Ajustar el ancho del video y el iframe */
+            height: 400px; /* Ajustar la altura para ser más cuadrado */
             margin: 20px auto;
             display: block;
+            border-radius: 10px; /* Bordes redondeados en video */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para el video */
         }
+
 
         a {
             display: inline-block;
             margin: 20px auto;
             padding: 12px 24px;
-            background-color: #8b4513; /* Botón marrón oscuro */
+            background-color: #696969; /* Botón gris oscuro */
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -70,29 +84,70 @@
         }
 
         a:hover {
-            background-color: #a0522d; /* Color más claro al pasar el ratón */
+            background-color: #808080; /* Color más claro al pasar el ratón */
             transform: scale(1.05); /* Efecto de escala */
+        }
+
+        /* Media Queries para pantallas pequeñas como móviles */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+                font-size: 2em; /* Tamaño de fuente ajustado en tablets */
+            }
+
+            h1 {
+                font-size: 2em; /* Tamaño de fuente más pequeño en dispositivos móviles */
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            img {
+                max-width: 90%; /* Limitar ancho de imagen en tablets */
+            }
+
+            a {
+                font-size: 1em; /* Ajustar tamaño de texto de enlaces en tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.5em; /* Tamaño de fuente más grande en móviles */
+            }
+
+            h1 {
+                font-size: 1.5em; /* Tamaño de fuente más pequeño en móviles */
+            }
+
+            img {
+                max-width: 100%; /* Imagen ajustada al ancho completo en pantallas pequeñas */
+            }
+
+            a {
+                font-size: 0.9em; /* Texto más pequeño en móviles */
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>El León</h1>
+        <h1>El Elefante</h1>
     </header>
 
     <div class="container">
-        <img src="https://misanimales.com/wp-content/uploads/2020/10/leon-tumbado-sabana.jpg" alt="León">
+        <img src="https://files.worldwildlife.org/wwfcmsprod/images/elephants_at_water_hole_WW2122503_Anup_Shah/story_full_width/7ozyekgso2_Medium_WW2122503.jpg" alt="Elefante">
         
-        <p>El león es conocido como el rey de la selva. Es uno de los grandes felinos que habitan en las sabanas africanas. Los leones son animales sociales que viven en manadas y son conocidos por su poderoso rugido, que puede escucharse a kilómetros de distancia.</p>
+        <p>El elefante es el animal terrestre más grande. Son conocidos por su inteligencia y su gran memoria. Los elefantes viven en manadas y son animales muy sociales, capaces de mostrar una gran variedad de emociones y comportamientos complejos.</p>
         
         <div class="media">
             <audio controls>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg">
+                <source src="C:\Users\betog\OneDrive\Desktop\Web\Zoologico\elefan.mp3" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
             </audio>
             
-            <iframe src="https://www.youtube.com/embed/Etd2a-tE_u4" allowfullscreen frameborder="0" width="700" height="400"></iframe>
-
+            <iframe src="https://www.youtube.com/embed/s3xQhBeA3F4" allowfullscreen></iframe>
         </div>
 
         <a href="zoologic.html">Volver al inicio</a>
