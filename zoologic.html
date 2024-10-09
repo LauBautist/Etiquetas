@@ -54,6 +54,27 @@
         a:hover {
             color: orange; /* Color al pasar el cursor */
         }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 50px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -61,6 +82,9 @@
     <header>
         <h1>Bienvenido al Zoológico</h1>
     </header>
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+    </nav>
 
     <div class="content">
         <img src="https://img.freepik.com/vector-gratis/animales-zoologico-fondo-naturaleza-salvaje_1308-43755.jpg" alt="León">
