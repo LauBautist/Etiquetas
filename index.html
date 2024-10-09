@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 20px;
+        }
+
+        .menu button {
+            width: 300px;
+            height: 300px;
+            background-color: #ffffff;
+            border: 5px solid rgb(148, 185, 145);
+            border-radius: 40%;
+            cursor: pointer;
+            font-size: 18px;
+            color: rgb(106, 106, 106);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu button:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu button img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .menu button .title {
+            margin-top: 15px;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'super chunky';
+        }
+
+        textarea {
+            width: 96%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            /* Cambiado de space-between a flex-end */
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown button {
+            background-color: rgb(148, 185, 145);
+            border: none;
+            color: white;
+            padding: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(148, 185, 145);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            left: -63px;
+            /* Ajusta este valor para mover los subbotones más a la izquierda */
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover button {
+            transform: scale(1.1);
+        }
+
+        /* Estilo de la ventana emergente (modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 70%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+        }
+
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-content input[type="text"],
+        .modal-content input[type="email"],
+        .modal-content textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            padding: 10px;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .modal-content button:hover {
+            background-color: rgb(38, 64, 37);
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+    .dropdown button {
+        max-width: 40px;
+        max-height: 40px;
+        padding: 5px;
+    }
+
+    .dropdown img {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 480px) {
+    .dropdown button {
+        max-width: 30px;
+        max-height: 30px;
+        padding: 5px;
+    }
+
+    .dropdown img {
+        width: 25px;
+        height: 25px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 3px 0;
+        font-size: 0.9em;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <button>
+            <h1>APRENDIENDO HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <div class="dropdown">
+            <button>
+                <img src="https://i.postimg.cc/N0jHLpMx/iconoMas.png" alt="Más opciones"
+                    style="width: 60px; height: 60px;">
+            </button>
+            <div class="dropdown-content">
+                <a href="Redes.html">Redes Sociales</a>
+                <a id="openModal" href="#">Comentarios</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="commentsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Envíanos tus comentarios</h2>
+            <form action="https://formspree.io/f/xdknqonb" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Comentarios:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="menu">
+        <button onclick="window.location.href='Introducción.html'">
+            <img src="https://i.postimg.cc/QMzHCDvX/menuformato.png" alt="Icono introducción">
+            <div class="title">Introducción a HTML</div>
+        </button>
+        <button onclick="window.location.href='Encabezados.html'">
+            <img src="https://i.postimg.cc/6Qz2V5TG/encabezados.png" alt="Icono Encabezados">
+            <div class="title">Encabezados de HTML</div>
+        </button>
+        <button onclick="window.location.href='Parrafos.html'">
+            <img src="https://i.postimg.cc/k558pt0y/parrafos.png" alt="Icono Parrafos">
+            <div class="title">Párrafos</div>
+        </button>
+        <button onclick="window.location.href='Formatos.html'">
+            <img src="https://i.postimg.cc/RCP0gDM2/formatos.png" alt="Icono Formatos">
+            <div class="title">Formatos</div>
+        </button>
+        <button onclick="window.location.href='Enlaces.html'">
+            <img src="https://i.postimg.cc/T3qwVmSH/enlace.jpg" alt="Icono Enlaces">
+            <div class="title">Enlaces</div>
+        </button>
+        <button onclick="window.location.href='Imagenes.html'">
+            <img src="https://i.postimg.cc/rpZt4xR2/imagenes.png" alt="Icono imagenes">
+            <div class="title">Imagenes</div>
+        </button>
+        <button onclick="window.location.href='Tablas.html'">
+            <img src="https://i.postimg.cc/XNfYS9NN/tablas.jpg" alt="Icono tablas">
+            <div class="title">Tablas</div>
+        </button>
+        <button onclick="window.location.href='Listas.html'">
+            <img src="https://i.postimg.cc/rFG0JvRJ/listas.jpg" alt="Icono Listas">
+            <div class="title">Listas</div>
+        </button>
+        <button onclick="window.location.href='Colores.html'">
+            <img src="https://i.postimg.cc/WzFzgyLM/color.webp" alt="Icono Colores">
+            <div class="title">Colores</div>
+        </button>
+        <button onclick="window.location.href='Formularios.html'">
+            <img src="https://i.postimg.cc/L4YjzCVC/formularios.png" alt="Icono Formularios">
+            <div class="title">Formularios</div>
+        </button>
+        <button onclick="window.location.href='Bloques.html'">
+            <img src="https://i.postimg.cc/SKdnh8fz/bloques.png" alt="Icono Bloques">
+            <div class="title">Bloques y elementos en línea </div>
+        </button>
+        <button onclick="window.location.href='Atributos.html'">
+            <img src="https://i.postimg.cc/8Pff67Nq/Atributo.jpg" alt="Icono Atributos">
+            <div class="title">Atributos</div>
+        </button>
+        <button onclick="window.location.href='AtributoClase.html'">
+            <img src="https://i.postimg.cc/P5GpzdqN/Atributo-Clase.png" alt="Icono Clases">
+            <div class="title">Atributos de clase </div>
+        </button>
+        <button onclick="window.location.href='JavaScript.html'">
+            <img src="https://i.postimg.cc/cLXKqwmt/javascript.png" alt="Icono Java">
+            <div class="title">Introducción a JavaScript </div>
+        </button>
+        <button onclick="window.location.href='Semantica.html'">
+            <img src="https://i.postimg.cc/BvhZQdF0/Semantica.png" alt="Icono Semantica">
+            <div class="title">Semantica HTML</div>
+        </button>
+    </div>
+
+    <footer>
+        <p> &copy; 2024 Aprendiendo HTML con Beto y Diana </p>
+    </footer>
+
+    <script>
+        // Abrir y cerrar la ventana modal
+        var modal = document.getElementById("commentsModal");
+        var openBtn = document.getElementById("openModal");
+        var closeBtn = document.getElementById("closeModal");
+
+        openBtn.onclick = function () {
+            modal.style.display = "flex";
+        }
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

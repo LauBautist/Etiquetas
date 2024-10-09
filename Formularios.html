@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 50px;
+            height: auto;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            /* Fondo blanco para las secciones */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        section p {
+            text-align: justify;
+        }
+
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        form {
+            background-color: #f9f9f9;
+            border: 2px solid rgb(38, 64, 37);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        input,
+        select,
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            font-weight: bold;
+            color: rgb(65, 95, 62);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        button {
+            background-color: rgb(200, 226, 217);
+            color: rgb(80, 80, 80);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(200, 226, 217);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <button>
+            <h1>Formularios en HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#formulario-basico">Formulario Básico</a>
+        <a href="#atributos-formulario">Atributos </a>
+        <a href="#elementos-formulario">Elementos de Formularios</a>
+        <a href="#tipos-entrada">Tipos de Entrada</a>
+        <a href="#atributos-entrada">Atributos de Entrada</a>
+        <a href="#Video">Video</a>
+        <a href="Bloques.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Colores.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+
+    </nav>
+
+    <!-- Formulario Básico -->
+    <section id="formulario-basico">
+        <h1>Formulario Básico</h1>
+        <p>Los formularios en HTML permiten a los usuarios ingresar datos que pueden ser enviados al servidor para su
+            procesamiento. Aquí tienes un ejemplo básico de un formulario:</p>
+
+        <form action="/submit" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <pre>
+    &lt;form action="/submit" method="POST"&gt;
+        &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+        &lt;input type="text" id="nombre" name="nombre" required&gt;
+
+        &lt;label for="correo"&gt;Correo Electrónico:&lt;/label&gt;
+        &lt;input type="email" id="correo" name="correo" required&gt;
+
+        &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+        &lt;textarea id="mensaje" name="mensaje" required&gt;&lt;/textarea&gt;
+
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+            </pre>
+    </section>
+
+    <!-- Atributos de Formularios -->
+    <section id="atributos-formulario">
+        <h1>Atributos de Formularios</h1>
+        <p>Un formulario en HTML tiene varios atributos importantes que determinan cómo se envían y procesan los datos:
+        </p>
+        <ul>
+            <li><strong>action:</strong> Especifica la URL a la que se enviarán los datos del formulario.</li>
+            <li><strong>method:</strong> Define el método HTTP utilizado para enviar los datos (GET o POST).</li>
+            <li><strong>enctype:</strong> Especifica cómo se codifican los datos cuando se envían al servidor (por
+                ejemplo, <code>multipart/form-data</code>).</li>
+        </ul>
+        <h3>Ejemplo de un formulario con atributos:</h3>
+        <form action="/procesar" method="GET">
+            <label for="busqueda">Buscar:</label>
+            <input type="text" id="busqueda" name="q" placeholder="Buscar algo...">
+
+            <button type="submit">Buscar</button>
+        </form>
+        <pre>
+    &lt;form action="/procesar" method="GET"&gt;
+        &lt;label for="busqueda"&gt;Buscar:&lt;/label&gt;
+        &lt;input type="text" id="busqueda" name="q"&gt;
+
+        &lt;button type="submit"&gt;Buscar&lt;/button&gt;
+    &lt;/form&gt;
+            </pre>
+    </section>
+
+    <!-- Elementos de Formularios -->
+    <section id="elementos-formulario">
+        <h1>Elementos de Formularios</h1>
+        <p>Dentro de un formulario, puedes utilizar varios elementos para recopilar diferentes tipos de datos del
+            usuario. Estos son algunos de los elementos más comunes:</p>
+        <ul>
+            <li><strong>&lt;input&gt;</strong>: Campo de entrada para texto, correo, contraseñas, etc.</li>
+            <li><strong>&lt;textarea&gt;</strong>: Campo para escribir textos más largos.</li>
+            <li><strong>&lt;select&gt;</strong>: Menú desplegable de opciones.</li>
+            <li><strong>&lt;button&gt;</strong>: Botón para enviar el formulario.</li>
+        </ul>
+        <h3>Ejemplo de uso de varios elementos:</h3>
+        <form>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="mx">México</option>
+                <option value="es">España</option>
+                <option value="ar">Argentina</option>
+            </select>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Escribe tus comentarios"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <pre>
+    &lt;form&gt;
+        &lt;label for="pais"&gt;País:&lt;/label&gt;
+        &lt;select id="pais" name="pais"&gt;
+            &lt;option value="mx"&gt;México&lt;/option&gt;
+            &lt;option value="es"&gt;España&lt;/option&gt;
+            &lt;option value="ar"&gt;Argentina&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;label for="comentarios"&gt;Comentarios:&lt;/label&gt;
+        &lt;textarea id="comentarios" name="comentarios"&gt;&lt;/textarea&gt;
+
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+            </pre>
+    </section>
+
+    <!-- Tipos de Entrada en HTML -->
+    <section id="tipos-entrada">
+        <h1>Tipos de Entrada en HTML</h1>
+        <p>Los diferentes tipos de entradas que puedes utilizar en un formulario de HTML se definen a través del
+            atributo <code>type</code> en el elemento <code>&lt;input&gt;</code>. Algunos ejemplos son:</p>
+        <ul>
+            <li><strong>text:</strong> Entrada de texto simple.</li>
+            <li><strong>email:</strong> Entrada para direcciones de correo electrónico.</li>
+            <li><strong>password:</strong> Entrada de contraseñas (los caracteres se ocultan).</li>
+            <li><strong>number:</strong> Entrada para números.</li>
+            <li><strong>date:</strong> Selector de fecha.</li>
+        </ul>
+        <h3>Ejemplo de varios tipos de entradas:</h3>
+        <form>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" max="100" placeholder="Ingresa tu edad">
+
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label for="correo2">Correo Electrónico:</label>
+            <input type="email" id="correo2" name="correo2" placeholder="ejemplo@correo.com">
+
+            <button type="submit">Enviar</button>
+        </form>
+        <pre>
+    &lt;form&gt;
+        &lt;label for="edad"&gt;Edad:&lt;/label&gt;
+        &lt;input type="number" id="edad" name="edad" min="18" max="100"&gt;
+
+        &lt;label for="fecha"&gt;Fecha de Nacimiento:&lt;/label&gt;
+        &lt;input type="date" id="fecha" name="fecha"&gt;
+
+        &lt;label for="correo2"&gt;Correo Electrónico:&lt;/label&gt;
+        &lt;input type="email" id="correo2" name="correo2"&gt;
+
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+            </pre>
+    </section>
+
+    <!-- Atributos de Entrada -->
+    <section id="atributos-entrada">
+        <h1>Atributos de Entrada</h1>
+        <p>Los campos de entrada en un formulario pueden tener varios atributos que afectan su comportamiento. Algunos
+            atributos importantes son:</p>
+        <ul>
+            <li><strong>required:</strong> Obliga al usuario a completar el campo antes de enviar el formulario.</li>
+            <li><strong>placeholder:</strong> Muestra un texto temporal dentro del campo que desaparece al escribir.
+            </li>
+            <li><strong>min</strong> y <strong>max:</strong> Establecen los valores mínimo y máximo para tipos de
+                entrada como <code>number</code> y <code>date</code>.</li>
+            <li><strong>pattern:</strong> Especifica una expresión regular que el valor del campo debe cumplir.</li>
+        </ul>
+        <h3>Ejemplo de atributos en campos de entrada:</h3>
+        <form>
+            <label for="telefono">Teléfono (formato 10 dígitos):</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="1234567890" pattern="[0-9]{10}" required>
+
+            <label for="password">Contraseña (mínimo 8 caracteres):</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <pre>
+    &lt;form&gt;
+        &lt;label for="telefono"&gt;Teléfono (formato 10 dígitos):&lt;/label&gt;
+        &lt;input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required&gt;
+
+        &lt;label for="password"&gt;Contraseña (mínimo 8 caracteres):&lt;/label&gt;
+        &lt;input type="password" id="password" name="password" minlength="8" required&gt;
+
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+            </pre>
+    </section>
+
+    <section id="Video">
+        <h1>Video: Formularios HTML</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VLeERv_dR6Q" allowfullscreen>
+        </div>
+        </iframe>
+    </section>
+
+    <footer>
+        <p> &copy; 2024 Desarrollado por Diana y Beto </p>
+    </footer>
+</body>
+
+</html>

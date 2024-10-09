@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+
+        nav img {
+            vertical-align: middle;
+            width: 50px;
+            height: auto;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            /* Fondo blanco para las secciones */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+
+        section p {
+            text-align: justify;
+        }
+
+
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        .example-box {
+            border: 2px solid rgb(38, 64, 37);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .top-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #c491f8;
+            border-radius: 10px;
+        }
+
+        .centered-image {
+            display: block;
+            margin: 30px auto 0;
+            width: 700px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .centered-image {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .centered-image {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <button>
+            <h1>Colores en HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#Definicion">Definición</a>
+        <a href="#Formas">Formas de Definir Colores</a>
+        <a href="#BordesFondos">Colores de Bordes y Fondos</a>
+        <a href="#Ejemplos">Ejemplos de Colores</a>
+        <a href="#Video">Video</a>
+        <a href="Formularios.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Listas.html"><img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+    </nav>
+
+    <section id="Definicion">
+        <h1>¿Qué son los colores en HTML?</h1>
+        <p>
+            En HTML, puedes aplicar colores a textos, fondos y otros elementos utilizando CSS. Los colores pueden ser
+            definidos de diversas formas: utilizando nombres de colores, valores hexadecimales, valores RGB o HSL.
+        </p>
+
+    </section>
+
+    <section id="Formas">
+        <h1>Formas de Definir Colores</h1>
+        <h3>1. Nombres de Colores</h3>
+        <p>HTML tiene una lista de nombres de colores predefinidos como <code>red</code>, <code>blue</code> o
+            <code>green</code>.
+        </p>
+        <p>Ejemplo:</p>
+        <pre>
+            color: red;
+        </pre>
+
+        <img src="https://i.postimg.cc/prfTsFrT/Nombres-Color.png" alt="Colores" class="centered-image">
+
+        <h3>2. Valores Hexadecimales</h3>
+        <p>Los colores también pueden ser definidos con valores hexadecimales. Estos comienzan con el símbolo
+            <code>#</code> seguido de seis dígitos que representan los niveles de rojo, verde y azul.
+        </p>
+        <p>Ejemplo:</p>
+        <pre>
+            color: #ff0000;  /* Rojo */
+        </pre>
+
+        <img src="https://i.postimg.cc/7hF6VNwj/colores.png" alt="Colores" class="centered-image">
+
+        <h3>3. Valores RGB</h3>
+        <p>Los valores RGB utilizan números que indican la intensidad de rojo, verde y azul en el color. Los valores
+            están en el rango de 0 a 255.</p>
+        <p>Ejemplo:</p>
+        <pre>
+            color: rgb(255, 0, 0);  /* Rojo */
+        </pre>
+
+        <img src="https://i.postimg.cc/CMXzSwkJ/colorrgb.png" alt="Colores" class="centered-image">
+
+
+        <h3>4. Valores HSL</h3>
+        <p>La notación HSL define un color en términos de su matiz (hue), saturación y luminosidad. Los valores de matiz
+            van de 0 a 360, y la saturación y luminosidad se expresan en porcentaje.</p>
+        <p>Ejemplo:</p>
+        <pre>
+            color: hsl(0, 100%, 50%);  /* Rojo */
+        </pre>
+
+        <img src="https://i.postimg.cc/8PLWY79L/hsl.webp" alt="Colores" class="centered-image">
+
+    </section>
+
+    <section id="BordesFondos">
+        <h1>Colores de Bordes y Fondos</h1>
+        <p>Además de aplicar colores al texto, puedes definir colores para los *bordes* y el *fondo* de los elementos
+            HTML utilizando las propiedades <code>border-color</code> y <code>background-color</code> en CSS.</p>
+
+        <h3>1. Color de Fondo</h3>
+        <p>El color de fondo de un elemento se define con <code>background-color</code>.</p>
+        <p>Ejemplo:</p>
+        <pre>
+            background-color: #f2e9fa;  /* Color lila claro */
+        </pre>
+
+        <h3>2. Color de Borde</h3>
+        <p>El color del borde de un elemento se define con <code>border-color</code>. Es necesario definir primero un
+            estilo de borde.</p>
+        <p>Ejemplo:</p>
+        <pre>
+            border: 2px solid rgb(141, 76, 167);  /* Borde morado */
+        </pre>
+    </section>
+
+    <section id="Ejemplos">
+        <h1>Ejemplos de Colores en HTML</h1>
+        <p>Aquí algunos ejemplos de cómo se aplican colores al texto, fondo y bordes:</p>
+
+        <div class="example-box" style="color: red;">
+            <p>Este texto es rojo.</p>
+        </div>
+
+        <div class="example-box" style="background-color: #f2e9fa;">
+            <p>Este fondo es de color lila claro.</p>
+        </div>
+
+        <div class="example-box" style="border-color: rgb(141, 76, 167); border-style: solid; border-width: 2px;">
+            <p>Este bloque tiene un borde morado.</p>
+        </div>
+    </section>
+
+    <section id="Video">
+        <h1>Video: Introducción a Colores en HTML</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/zCrolmdqmF8" allowfullscreen>
+        </div>
+        </iframe>
+    </section>
+    <footer>
+        <p> &copy; 2024 Desarrollado por Diana y Beto </p>
+    </footer>
+</body>
+
+</html>

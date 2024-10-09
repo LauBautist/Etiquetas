@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo de Clase en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+            /* Espacio entre la imagen y el texto */
+        }
+
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        section p,
+        section ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        .bloque {
+            background-color: #f9f9f9;
+            border: 2px solid rgb(148, 185, 145);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <button>
+            <h1>Atributo de Clase en HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#atributo-clase">Atributo de Clase</a>
+        <a href="#uso-clase">Uso del Atributo</a>
+        <a href="#sintaxis-clase">Sintaxis</a>
+        <a href="#clases-multiples">Clases Múltiples</a>
+        <a href="#compartir-clase">Elementos Compartiendo la Misma Clase</a>
+        <a href="#Video">Video</a>
+        <a href="JavaScript.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Atributos.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+    </nav>
+
+    <!-- Atributo de Clase -->
+    <section id="atributo-clase">
+        <h2>Atributo de Clase HTML</h2>
+        <p>
+            El atributo <code>class</code> es uno de los atributos más usados en HTML. Permite asignar uno o más nombres
+            de clase a un elemento,
+            lo que facilita la aplicación de estilos CSS o la manipulación con JavaScript. La clase funciona como un
+            identificador que puede ser
+            compartido por varios elementos, permitiendo aplicarles estilos comunes.
+        </p>
+        <pre>
+&lt;div class="container"&gt;
+    Contenido aquí
+&lt;/div&gt;
+        </pre>
+    </section>
+
+    <!-- Uso del Atributo de Clase -->
+    <section id="uso-clase">
+        <h2>Uso del Atributo de Clase</h2>
+        <p>
+            El uso principal del atributo <code>class</code> es asociar estilos CSS con los elementos HTML. También
+            permite identificar
+            grupos de elementos en JavaScript para interactuar con ellos. Un elemento puede tener una o varias clases,
+            lo que permite gran flexibilidad en su personalización.
+        </p>
+        <h3>Ejemplo de uso con CSS</h3>
+        <pre>
+/* CSS */
+.container {
+    background-color: #f2e9fa;
+    padding: 20px;
+    border: 1px solid rgb(141, 76, 167);
+    border-radius: 8px;
+}
+
+/* HTML */
+&lt;div class="container"&gt;
+    Este es un contenedor estilizado.
+&lt;/div&gt;
+        </pre>
+        <div class="bloque">
+            Este es un ejemplo de un contenedor estilizado usando la clase <code>.container</code>.
+        </div>
+    </section>
+
+    <!-- La sintaxis de la clase -->
+    <section id="sintaxis-clase">
+        <h2>La Sintaxis de la Clase</h2>
+        <p>
+            La sintaxis para utilizar el atributo <code>class</code> es simple. Se incluye el nombre de la clase dentro
+            del atributo
+            <code>class</code> en el elemento HTML. Puedes utilizar cualquier nombre para una clase, siempre que siga
+            las reglas estándar de nombres
+            en HTML y CSS.
+        </p>
+        <pre>
+&lt;elemento class="nombre-de-clase"&gt;
+    Contenido del elemento
+&lt;/elemento&gt;
+        </pre>
+        <p>Recuerda que en CSS, los nombres de clase se refieren anteponiendo un punto (.).</p>
+    </section>
+
+    <!-- Clases múltiples -->
+    <section id="clases-multiples">
+        <h2>Clases Múltiples</h2>
+        <p>
+            Un elemento HTML puede tener más de una clase asignada, lo que permite aplicar múltiples estilos. Para
+            asignar varias clases,
+            simplemente separa cada nombre de clase con un espacio dentro del atributo <code>class</code>.
+        </p>
+        <h3>Ejemplo de Clases Múltiples</h3>
+        <pre>
+/* CSS */
+.bloque {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.fondo {
+    background-color: #f9f9f9;
+}
+
+/* HTML */
+&lt;div class="bloque fondo"&gt;
+    Este es un bloque con múltiples clases.
+&lt;/div&gt;
+        </pre>
+        <div class="bloque fondo">
+            Este es un ejemplo de un bloque con las clases <code>.bloque</code> y <code>.fondo</code>.
+        </div>
+    </section>
+
+    <!-- Compartir la misma clase -->
+    <section id="compartir-clase">
+        <h2>Diferentes Elementos Pueden Compartir la Misma Clase</h2>
+        <p>
+            Un aspecto clave del atributo <code>class</code> es que múltiples elementos HTML pueden compartir la misma
+            clase, lo que facilita
+            aplicar los mismos estilos a diferentes partes de la página. Esto es útil para mantener la consistencia
+            visual.
+        </p>
+        <h3>Ejemplo</h3>
+        <pre>
+/* CSS */
+.destacado {
+    color: rgb(87, 2, 121);
+    font-weight: bold;
+}
+
+/* HTML */
+&lt;p class="destacado"&gt;Este párrafo está destacado.&lt;/p&gt;
+&lt;h2 class="destacado"&gt;Este título también está destacado.&lt;/h2&gt;
+        </pre>
+        <p class="destacado">Este párrafo está destacado.</p>
+        <h2 class="destacado">Este título también está destacado.</h2>
+    </section>
+
+    </section>
+    <Section id="Video">
+        <h2>Vídeo: Bloque HTML y en línea</h2>
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/tWIkDOJo0Ts"
+            allowfullscreen>
+        </div>
+        </iframe>
+    </Section>
+
+    <footer>
+        <p> &copy; 2024 Desarrollado por Beto y Diana </p>
+    </footer>
+
+</body>
+
+</html>

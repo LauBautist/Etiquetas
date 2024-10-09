@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encabezados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 50px;
+            height: auto;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        section p {
+            text-align: justify;
+        }
+
+        section ul {
+            text-align: justify;
+        }
+
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(200, 226, 217);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+<header>
+    <button>
+        <h1>Encabezados</h1>
+    </button>
+</header>
+
+<nav>
+    <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+    <a href="#Definicion">Definición</a>
+    <a href="#Importancia-SEO">Importancia</a>
+    <a href="#Ejemplos">Ejemplos</a>
+    <a href="#Encabezados Grandes">Encabezados Grandes</a>
+    <a href="#Tabla">Tabla de referencias</a>
+    <a href="#Video">Video</a>
+    <a href="Parrafos.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+    <a href="Introducción.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+
+</nav>
+
+<section id="Definicion">
+    <h1>¿Qué es un encabezado?</h1>
+    <p>
+        Los encabezados en HTML se utilizan para definir la jerarquía y estructura del contenido en una página web.
+        Existen seis niveles de encabezados, desde <code>&lt;h1&gt;</code> hasta <code>&lt;h6&gt;</code>.</p>
+</section>
+
+<section id="Importancia-SEO">
+    <h1>Importancia de los Encabezados en SEO</h1>
+    <p>
+        Los encabezados no solo ayudan a estructurar el contenido, sino que también juegan un papel crucial en el SEO.
+        Los motores de búsqueda utilizan los encabezados para comprender la jerarquía y el contexto del contenido de una
+        página. Aquí hay algunos puntos clave:
+    </p>
+    <ul>
+        <li><strong>Jerarquía del Contenido:</strong> Un uso correcto de encabezados como <code>&lt;h1&gt;</code>,
+            <code>&lt;h2&gt;</code>, y <code>&lt;h3&gt;</code> ayuda a los motores de búsqueda a identificar qué
+            información es más importante.
+        </li>
+        <li><strong>Palabras Clave:</strong> Incluir palabras clave relevantes en los encabezados puede ayudar a
+            mejorar la visibilidad en los resultados de búsqueda.</li>
+        <li><strong>Experiencia del Usuario:</strong> Los encabezados mejoran la legibilidad y la navegabilidad,
+            lo que resulta en una mejor experiencia para el usuario, un factor que también puede afectar el SEO.</li>
+    </ul>
+    <img src="https://i.postimg.cc/66Mwf490/Encabezado.webp" alt="Ejemplo Basico"
+        style="display: block; margin: 0 auto; width: 400px; border: 2px solid  rgb(38, 64, 37);  border-radius: 10px;">
+</section>
+
+<section id="Ejemplos">
+
+    <h1>Ejemplos de los tipos de encabezados</h1>
+    <p>A continuación se muestran ejemplos de cada uno de los niveles de encabezado:</p>
+
+    <pre>
+    &lt;h1&gt;Este es un Encabezado de Nivel 1&lt;/h1&gt;
+    &lt;h2&gt;Este es un Encabezado de Nivel 2&lt;/h2&gt;
+    &lt;h3&gt;Este es un Encabezado de Nivel 3&lt;/h3&gt;
+    &lt;h4&gt;Este es un Encabezado de Nivel 4&lt;/h4&gt;
+    &lt;h5&gt;Este es un Encabezado de Nivel 5&lt;/h5&gt;
+    &lt;h6&gt;Este es un Encabezado de Nivel 6&lt;/h6&gt;
+</pre>
+
+    <h1>Este es un Encabezado de Nivel 1</h1>
+    <p>El encabezado <code>&lt;h1&gt;</code> es el más importante y generalmente se utiliza para el título principal de
+        una página.</p>
+
+    <h2>Este es un Encabezado de Nivel 2</h2>
+    <p>El encabezado <code>&lt;h2&gt;</code> es el segundo en importancia y se usa para secciones principales.</p>
+
+    <h3>Este es un Encabezado de Nivel 3</h3>
+    <p>El encabezado <code>&lt;h3&gt;</code> se usa para subsecciones dentro de una sección.</p>
+
+    <h4>Este es un Encabezado de Nivel 4</h4>
+    <p>El encabezado <code>&lt;h4&gt;</code> es menos importante que <code>&lt;h3&gt;</code> y se usa para subsecciones
+        más específicas.</p>
+
+    <h5>Este es un Encabezado de Nivel 5</h5>
+    <p>El encabezado <code>&lt;h5&gt;</code> tiene menos relevancia y se usa raramente.</p>
+
+    <h6>Este es un Encabezado de Nivel 6</h6>
+    <p>El encabezado <code>&lt;h6&gt;</code> es el menos importante y rara vez se usa.</p>
+    </p>
+
+</section>
+
+<section id="Encabezados Grandes">
+    <h1>Encabezados Más Grandes</h1>
+    <p>
+        Cada encabezado HTML tiene un tamaño predeterminado. Sin embargo, puedes especificar el tamaño de cualquier
+        encabezado usando el atributo <code>style</code> con la propiedad CSS <code>font-size</code>.
+    </p>
+
+    <h3>Ejemplo de Encabezados con Tamaño Personalizado</h3>
+    <h1><code> style="font-size:60px;">Titulo 1 (60px)</code></h1>
+    <h1 style="font-size:60px;">Titulo 1 (60px)</h1>
+    <p>Este encabezado <code>&lt;h1&gt;</code> se ha ajustado a un tamaño de 60px utilizando el atributo
+        <code>style</code>.
+    </p>
+
+</section>
+
+<section id="Tabla">
+    <h1>Referencia de Etiquetas HTML</h1>
+    <p>La referencia de etiquetas de W3Schools contiene información adicional sobre estas etiquetas y sus atributos.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Etiqueta</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;html&gt;</td>
+                <td>Define la raíz de un documento HTML</td>
+            </tr>
+            <tr>
+                <td>&lt;body&gt;</td>
+                <td>Define el cuerpo del documento</td>
+            </tr>
+            <tr>
+                <td>&lt;h1&gt; a &lt;h6&gt;</td>
+                <td>Define los encabezados HTML</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<Section id="Video">
+
+    <h1>Video: Encabezados en HTML</h1>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/9gHPpwq6IaY" allowfullscreen>
+    </div>
+    </iframe>
+</Section>
+
+<footer>
+    <p> &copy; 2024 Desarrollado por Diana y Beto </p>
+</footer>
+
+</body>
+
+</html>

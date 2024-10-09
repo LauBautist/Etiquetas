@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloques HTML y Elementos en Línea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+            /* Espacio entre la imagen y el texto */
+        }
+
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        section p,
+        section ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .bloque {
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .inline {
+            color: rgb(38, 64, 37);
+            font-weight: bold;
+            background-color: rgb(233, 244, 240);
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <button>
+            <h1>Bloques y Elementos en Línea en HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#bloques-inline">Bloques y Elementos en Línea</a>
+        <a href="#div">El elemento &lt;div&gt;</a>
+        <a href="#span">El elemento &lt;span&gt;</a>
+        <a href="#Video">Video</a>
+        <a href="Atributos.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Formularios.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+    </nav>
+
+    <!-- Bloques y Elementos en Línea -->
+    <section id="bloques-inline">
+        <h1>Bloques HTML y Elementos en Línea</h1>
+        <p>
+            En HTML, los elementos se dividen en dos grandes categorías: *elementos de bloque* y *elementos en línea*.
+            Esta diferenciación es importante para entender cómo se comportan los elementos dentro de una página web.
+        </p>
+
+        <h3>Elementos de Bloque</h3>
+        <p>
+            Los *elementos de bloque* son aquellos que ocupan todo el ancho disponible de su contenedor. Esto significa
+            que siempre
+            comienzan en una nueva línea y pueden contener otros elementos de bloque o elementos en línea. Los elementos
+            de bloque
+            se utilizan para estructurar el contenido en bloques grandes y visualmente separados.
+        </p>
+        <ul>
+            <li><strong>Empiezan en una nueva línea</strong> y ocupan el ancho completo del contenedor.</li>
+            <li>Pueden contener otros elementos de bloque o elementos en línea.</li>
+            <li>Utilizados para agrupar contenido o crear secciones de la página.</li>
+        </ul>
+        <h3>Elementos en Línea</h3>
+        <p>
+            Los *elementos en línea* solo ocupan el espacio necesario para su contenido. No inician en una nueva línea,
+            lo que permite
+            que múltiples elementos en línea puedan aparecer uno al lado del otro. Son ideales para dar estilo o agrupar
+            pequeñas partes de texto.
+        </p>
+        <ul>
+            <li>No inician en una nueva línea.</li>
+            <li>Solo ocupan el espacio necesario para su contenido.</li>
+            <li>No pueden contener elementos de bloque, pero sí otros elementos en línea.</li>
+        </ul>
+
+        <h3>Ejemplo de Elementos en Bloque y en Línea:</h3>
+        <div class="bloque">
+            Este es un <strong>elemento de bloque</strong>, usando la etiqueta <code>&lt;div&gt;</code>.
+        </div>
+        <p>Este es un párrafo, que también es un <span class="inline">elemento de bloque</span>.</p>
+        <p>Este es un <span class="inline">texto en línea</span> dentro de un párrafo, que es un elemento de bloque.</p>
+        <pre>
+&lt;div&gt;
+    Este es un elemento de bloque usando la etiqueta &lt;div&gt;.
+&lt;/div&gt;
+
+&lt;p&gt;
+    Este es un párrafo con texto en línea como &lt;span&gt; dentro de él.
+&lt;/p&gt;
+        </pre>
+    </section>
+
+    <!-- El elemento <div> -->
+    <section id="div">
+        <h1>El elemento &lt;div&gt;</h1>
+        <p>
+            El elemento <code>&lt;div&gt;</code> es uno de los más utilizados en HTML para agrupar contenido.
+            No tiene ningún significado semántico, pero es extremadamente útil para organizar y dar estilo a las
+            secciones
+            de una página web. Se comporta como un elemento de bloque.
+        </p>
+        <div class="bloque">
+            <h3>Título dentro de un div</h3>
+            <p>Este es un párrafo dentro de un <code>&lt;div&gt;</code>. Puedes agrupar varios elementos dentro de un
+                <code>&lt;div&gt;</code> para aplicarles un estilo o manipularlos de forma conjunta.
+            </p>
+        </div>
+        <pre>
+&lt;div&gt;
+    &lt;h3&gt;Título dentro de un div&lt;/h3&gt;
+    &lt;p&gt;Este es un párrafo dentro de un &lt;div&gt;...&lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+    </section>
+
+    <!-- El elemento <span> -->
+    <section id="span">
+        <h1>El elemento &lt;span&gt;</h1>
+        <p>
+            El elemento <code>&lt;span&gt;</code> es un contenedor genérico de tipo en línea. Se usa principalmente para
+            aplicar estilos
+            a una porción específica de texto o contenido dentro de otro elemento. A diferencia de
+            <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>
+            no crea un nuevo bloque, sino que permanece en línea con el contenido circundante.
+        </p>
+        <p>Ejemplo de uso de <code>&lt;span&gt;</code>:</p>
+        <p>Este es un párrafo en el que un <span class="inline">texto en línea</span> está resaltado utilizando
+            <code>&lt;span&gt;</code>.
+        </p>
+        <pre>
+&lt;p&gt;
+    Este es un párrafo con un &lt;span&gt; usado para resaltar una porción del texto.
+&lt;/p&gt;
+        </pre>
+    </section>
+    </section>
+    <Section id="Video">
+        <h1>Vídeo: Bloque HTML y en línea</h1>
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/M4n-WSkehmI" 
+            allowfullscreen>
+        </div>
+        </iframe>
+    </Section>
+
+    <footer>
+        <p> &copy; 2024 Desarrollado por Beto y Diana </p>
+    </footer>
+
+</body>
+
+</html>

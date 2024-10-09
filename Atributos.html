@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 40px;
+            /* Tamaño de los iconos */
+            height: auto;
+            margin-right: 8px;
+            /* Espacio entre la imagen y el texto */
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            /* Fondo blanco para las secciones */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        section p {
+            text-align: justify;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(208, 96, 178);
+            /* Color de fondo del pie de página */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #Definicion img {
+            float: left;
+            margin-right: 15px;
+            width: 90px;
+        }
+
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button>
+            <h1>Atributos de HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#Definicion">Definición</a>
+        <a href="#Tipos de Atributos">Tipos de Atributos</a>
+        <a href="#Video">Video</a>
+        <a href="AtributoClase.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Bloques.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+
+    </nav>
+
+    <section id="Definicion">
+        <h1>¿Qué es un Atributo?</h1>
+        <img src="https://i.postimg.cc/vZM9wQwk/html.png" alt="Imagen sobre qué es HTML">
+        <p>
+            un atributo es una pieza de información adicional que se agrega a una etiqueta para proporcionar más
+            detalles
+            sobre cómo debe comportarse o mostrarse un elemento en una página web.
+            Los atributos se colocan dentro de la etiqueta de apertura de un elemento y suelen consistir en un nombre y
+            un valor.
+            Todos los elementos HTML pueden tener atributos, los atributos proporcionan información adicional sobre los
+            elementos.
+            Los atributos siempre se especifican en la etiqueta de inicio, los atributos generalmente vienen en pares
+            nombre/valor como: nombre="valor"
+        </p>
+    </section>
+
+    <section id="Tipos de Atributos">
+        <h1>Tipos: </h1>
+        <pre>
+    Todos los elementos HTML pueden tener atributos
+    El href atributo de <code>&lt;a&gt; </code> especifica la URL de la página a la que va el enlace.
+    El src atributo de <code>&lt;img&gt; </code> especifica la ruta a la imagen que se mostrará
+    Los atributos widthy proporcionan información sobre el tamaño de las imágenesheight <code>&lt;img &gt; </code>
+    El alt atributo de<code> &lt;img&gt; </code>proporciona un texto alternativo para una imagen.
+    El style atributo se utiliza para agregar estilos a un elemento, como color, fuente, tamaño y más.
+    El lang atributo de la <code> &lt;html&gt;</code> etiqueta declara el idioma de la página web.
+    El title atributo define información adicional sobre un elemento.
+</pre>
+
+        <h2>Atributo href</h2>
+        <p>
+            La<code>&lt; a &gt; </code>etiqueta define un hipervínculo. El href atributo especifica la URL de la página
+            a la que lleva el vínculo:
+        </p>
+
+        <ul>
+            <li>EL <code>&lt;<a href="#Atributos">href="#Atributos"</a> &gt; </code>.</li>
+
+        </ul>
+
+
+        <h2>Atributo Src</h2>
+        <p> La<code>&lt; img &gt; </code>etiqueta se utiliza para incrustar una imagen en una página HTML. El src
+            atributo especifica la ruta a la imagen que se mostrará:
+            <code>   src="https://i0.wp.com/www.irinadelgado.com/wp-content/uploads/2020/04/etiquetas-y-atributos-hmtl-3.png?resize=518%2C322&ssl=1.jpg"</code>
+        </p>
+        <img src="https://i0.wp.com/www.irinadelgado.com/wp-content/uploads/2020/04/etiquetas-y-atributos-hmtl-3.png?resize=518%2C322&ssl=1.jpg"
+            alt="Ejemplo Basico">
+
+        <p>Hay dos formas de especificar la URL en el <code>src</code> atributo:</p>
+
+        <ol>
+            <li><strong>URL absoluta</strong>: enlaces a una imagen externa alojada en otro sitio web. Ejemplo:
+                <br>
+                <code>src="https://i0.wp.com/www.irinadelgado.com/wp-content/uploads/2020/04/etiquetas-y-atributos-hmtl-3.png?resize=518%2C322&ssl=1.jpg"</code>.
+            </li>
+        </ol>
+
+        <p>Notas: Las imágenes externas pueden estar sujetas a derechos de autor. Si no obtiene permiso para usarlas,
+            puede estar infringiendo las leyes de derechos de autor. Además, no puede controlar las imágenes externas;
+            pueden eliminarse o modificarse repentinamente.</p>
+
+        <ol start="2">
+            <li><strong>URL relativa</strong>: enlaces a una imagen alojada en el sitio web. En este caso, la URL no
+                incluye el nombre de dominio. Si la URL comienza sin una barra, será relativa a la página actual.
+                Ejemplo:
+                <br>
+                <code>src="img_girl.jpg"</code>. Si la URL comienza con una barra, será relativa al dominio. Ejemplo:
+                <br>
+                <code>src="/images/img_girl.jpg"</code>.
+            </li>
+        </ol>
+
+
+        <h2>Atributos Width y Height</h2>
+        <p>
+            La<code>&lt; img &gt; </code>etiqueta también debe contener los atributos width y height, que especifican el
+            ancho y la altura de la imagen (en píxeles):
+
+        </p>
+        <code> img src="C:\Users\betog\OneDrive\Desktop\Web\proyectoFinalEtiquetas\playa.jpg" width="300" height="300"</code>
+        <ul>
+
+            <img src="https://i.postimg.cc/mDxBKg0F/vista.jpg" width="300" height="300">
+
+        </ul>
+
+
+        <h2>EL Atributo Alt</h2>
+        <p>
+            El atributo requerido<code>&lt;alt&gt; </code> para la<code>&lt; img&gt; </code>etiqueta especifica un texto
+            alternativo para una imagen, si por algún motivo no se puede mostrar la imagen. Esto puede deberse a una
+            conexión lenta, a un error en el srcatributo o si el usuario utiliza un lector de pantalla.
+        </p>
+        <code> img src="C:\Users\betog\OneDrive\Desktop\Web\proyectoFinalEtiquetas\playa.jpg" alt="paisaje" width="300" height="300"</code>
+        <ul>
+
+            <img src="https://i.postimg.cc/mDxBKg0F/vista.jpg" alt="paisaje" width="300" height="300">
+
+        </ul>
+        <p>
+            <code>C:\Users\betog\OneDrive\Desktop\Web\proyectoFinalEtiquetas\playaa.jpg alt="paisaje"</code>
+        </p>
+        <ul>
+            <img src="https://i.postimg.cc/mDxBKg0F/vista.jpg" alt="paisaje">
+        </ul>
+    </section>
+    <section id="Atributo Style">
+        <h2>El Atributo Style</h2>
+        <p>
+            El <code>style</code> atributo se utiliza para agregar estilos a un elemento, como color, fuente, tamaño y
+            más.
+            <code>style="color:red;" >Este es un párrafo rojo.</code>
+        </p>
+        <p style="color:red;">Este es un párrafo rojo.</p>
+
+        <h2>EL Atributo Lang</h2>
+        <p>
+            El atributo <code>lang</code> se utiliza en la etiqueta <code>&lt;html&gt;</code> para declarar el idioma
+            principal del contenido de la página web. Esto es útil para que los motores de búsqueda, los navegadores, y
+            los lectores de pantalla sepan en qué idioma se encuentra el texto.
+        </p>
+        <p>Ejemplo:</p>
+        <pre>
+            &lt;html lang="es"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Mi Página en Español&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;Este es un ejemplo de una página en español.&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        <p>
+            En el ejemplo anterior, <code>lang="es"</code> indica que el idioma de la página es el español. Esto puede
+            cambiarse a otros valores como <code>lang="en"</code> para inglés, <code>lang="fr"</code> para francés, etc.
+        </p>
+
+        <h2>Atributo Title</h2>
+        <p>
+            El atributo <code>title</code> se utiliza para proporcionar información adicional sobre un elemento. Cuando
+            el usuario pasa el cursor sobre un elemento que tiene un atributo <code>title</code>, aparece un texto
+            emergente (tooltip) con la información proporcionada.
+        </p>
+        <p>Ejemplo:</p>
+        <pre>
+            &lt;p title="Texto emergente que aparece al pasar el cursor"&gt;
+                Pasa el cursor por aquí para ver el título.
+            &lt;/p&gt;
+        </pre>
+        <p>
+            En el ejemplo anterior, cuando el usuario pasa el cursor sobre el párrafo, aparece un texto emergente que
+            dice "Texto emergente que aparece al pasar el cursor".
+        </p>
+
+        <h2>Comillas Simples o Dobles</h2>
+        <p>
+            En HTML, tanto las comillas simples (<code>'</code>) como las comillas dobles (<code>"</code>) se pueden
+            utilizar para delimitar los valores de los atributos. No hay una diferencia funcional entre ambas, y puedes
+            usar la que prefieras según tus necesidades o preferencias.
+        </p>
+        <p>Ejemplo con comillas dobles:</p>
+        <pre>
+            &lt;p title=&quot;Texto emergente con comillas dobles&quot;&gt;
+                Pasa el cursor por aquí para ver el título.
+            &lt;/p&gt;
+        </pre>
+        <p title="Texto emergente con comillas dobles">
+            Pasa el cursor por aquí para ver el título.
+        </p>
+        <p>Ejemplo con comillas simples:</p>
+        <pre>
+            &lt;p title='Texto emergente con comillas simples'&gt;
+                Pasa el cursor por aquí para ver el título.
+            &lt;/p&gt;
+        </pre>
+        <p title='Texto emergente con comillas simples'>
+            Pasa el cursor por aquí para ver el título.
+        </p>
+        <p>
+            En ambos ejemplos anteriores, el atributo <code>title</code> funciona de la misma manera y muestra un texto
+            emergente cuando el usuario pasa el cursor sobre el elemento.
+        </p>
+    </section>
+
+    <Section id="Video">
+        <h1>Video: Atributos de HTML</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/yMX901oVtn8" allowfullscreen>
+        </div>
+        </iframe>
+    </Section>
+
+    <footer>
+        <p> &copy; 2024 Desarrollado por Diana y Beto </p>
+    </footer>
+
+</body>
+
+</html>

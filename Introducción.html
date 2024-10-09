@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción de las etiquetas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 40px;
+            height: auto;
+            margin-right: 8px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+
+
+        section h2 {
+            color: rgb(11, 11, 11);
+            font-family: 'Bahnschrift Light';
+        }
+
+        section p {
+            text-align: justify;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(200, 226, 217);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button>
+            <h1>Introducción a HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#Definicion">Definición</a>
+        <a href="#Estructura">Estructura básica de HTML</a>
+        <a href="#Explicacion">Explicación del ejemplo</a>
+        <a href="#Navegadores">Navegadores</a>
+        <a href="#historial-html">Historial de HTML</a>
+        <a href="#Video">Video</a>
+        <a href="Encabezados.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+    </nav>
+
+    <section id="Definicion">
+        <h1>¿Qué es HTML?</h1>
+        <img src="https://i.postimg.cc/vZM9wQwk/html.png" alt="Imagen sobre qué es HTML"
+            style="float:left; margin-right:15px; width:125px;">
+        <p>
+            HTML, o Lenguaje de Marcado de Hipertexto, es un lenguaje de programación que define la estructura
+            y el significado de las páginas web. Se trata de un código que indica al navegador cómo ordenar el
+            contenido de una página web, como los textos, títulos, imágenes, videos y párrafos.
+            El HTML es el componente básico de la web y se utiliza para crear páginas estáticas con elementos
+            como tablas, listas, imágenes, encabezados y enlaces.
+            El origen del HTML se remonta a 1980, cuando el físico Tim Berners-Lee, investigador del CERN, propuso
+            un sistema de hipertexto para compartir documentos. La idea era que los científicos pudieran compartir
+            sus investigaciones para que sus colegas pudieran consultarlas fácilmente.
+            Para crear un sitio web profesional, el HTML se complementa con otras tecnologías como las Hojas de Estilo
+            en Cascada (CSS) y JavaScript. El CSS se encarga de los estilos de la página, como el fondo, los colores, el
+            diseño, el espaciado y las animaciones. JavaScript añade funcionalidades dinámicas como galerías de fotos,
+            sliders y pop-ups.
+        </p>
+    </section>
+
+    <section id="Estructura">
+        <h1>Estructura básica: </h1>
+        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="es"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Página HTML Simple&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;¡Bienvenido a mi página web!&lt;/h1&gt;
+        &lt;p&gt;Este es un ejemplo de un documento HTML básico.&lt;/p&gt;
+        &lt;a href="https://www.ejemplo.com"&gt;Haz clic aquí para ir a Ejemplo.com&lt;/a&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+    </section>
+
+    <section id="Explicacion">
+        <h1>Ejemplo explicado</h1>
+        <ul>
+            <li>La <code>&lt;!DOCTYPE html&gt; :</code> define que este documento es un documento HTML5.</li>
+            <li>El <code>&lt;html lang="es"&gt;:</code> es el elemento raíz de una página HTML.</li>
+            <li>El <code>&lt;head&gt;:</code> contiene metainformación sobre la página HTML.</li>
+            <li>El <code>&lt;meta charset="UTF-8"&gt;:</code> define la codificación de caracteres del documento.</li>
+            <li>El <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;:</code> configura
+                la vista para dispositivos móviles y de escritorio.</li>
+            <li>El <code>&lt;title&gt;Página HTML Simple&lt;/title&gt;:</code> define el título del documento.</li>
+            <li>El <code>&lt;body&gt;:</code> define el cuerpo del documento y contiene todo el contenido visible.</li>
+            <li>El <code>&lt;h1&gt;¡Bienvenido a mi página web!&lt;/h1&gt;:</code> es un encabezado principal de nivel
+                1.</li>
+            <li>El <code>&lt;p&gt;Este es un ejemplo de un documento HTML básico.&lt;/p&gt;:</code> define un párrafo de
+                texto.</li>
+            <li>El <code>&lt;a href="https://www.ejemplo.com"&gt;Haz clic aquí para ir a Ejemplo.com&lt;/a&gt;:</code>
+                es un enlace que lleva al usuario a una URL externa.</li>
+        </ul>
+    </section>
+
+    <section id="Navegadores">
+        <h1>Navegadores</h1>
+        <p> El propósito de un navegador web (Chrome, Edge, Firefox, Safari) es leer documentos HTML y mostrarlos
+            correctamente.
+            Un navegador no muestra las etiquetas HTML, sino que las utiliza para determinar cómo mostrar el documento:
+        </p>
+        <img src="https://i.postimg.cc/zG1vHpdg/ejemplobasico.png" alt="Ejemplo Basico"
+            style="display: block; margin: 0 auto; width: 400px; border: 2px solid  rgb(38, 64, 37);  border-radius: 10px;">
+    </section>
+
+    <section id="historial-html">
+        <h2>Historial de HTML</h2>
+        <p>Desde los primeros días de la World Wide Web, ha habido muchas versiones de HTML:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Año</th>
+                    <th>Versión</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1989</td>
+                    <td>Tim Berners-Lee inventó la World Wide Web (www)</td>
+                </tr>
+                <tr>
+                    <td>1991</td>
+                    <td>Tim Berners-Lee inventó HTML</td>
+                </tr>
+                <tr>
+                    <td>1993</td>
+                    <td>Dave Raggett redactó HTML+</td>
+                </tr>
+                <tr>
+                    <td>1995</td>
+                    <td>El Grupo de Trabajo de HTML definió HTML 2.0</td>
+                </tr>
+                <tr>
+                    <td>1997</td>
+                    <td>Recomendación del W3C: HTML 3.2</td>
+                </tr>
+                <tr>
+                    <td>1999</td>
+                    <td>Recomendación del W3C: HTML 4.01</td>
+                </tr>
+                <tr>
+                    <td>2000</td>
+                    <td>Recomendación del W3C: XHTML 1.0</td>
+                </tr>
+                <tr>
+                    <td>2008</td>
+                    <td>Primer Borrador Público del WHATWG: HTML5</td>
+                </tr>
+                <tr>
+                    <td>2012</td>
+                    <td>Estándar Viviente del WHATWG: HTML5</td>
+                </tr>
+                <tr>
+                    <td>2014</td>
+                    <td>Recomendación del W3C: HTML5</td>
+                </tr>
+                <tr>
+                    <td>2016</td>
+                    <td>Recomendación Candidata del W3C: HTML 5.1</td>
+                </tr>
+                <tr>
+                    <td>2017</td>
+                    <td>Recomendación del W3C: HTML5.1 (2ª Edición)</td>
+                </tr>
+                <tr>
+                    <td>2017</td>
+                    <td>Recomendación del W3C: HTML5.2</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <section id="Video">
+        <h1>Video: Introducción a HTML</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/it1rTvBcfRg" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+    <footer>
+        <p> &copy; 2024 Aprendiendo HTML con Beto y Diana </p>
+    </footer>
+</body>
+
+</html>

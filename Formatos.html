@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatos en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 40px;
+            height: auto;
+            margin-right: 8px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        section p {
+            text-align: justify;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section img {
+            width: 400px;
+            border: 2px solid rgb(38, 64, 37);
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button>
+            <h1>Formatos en HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#Definicion">Definición</a>
+        <a href="#Elementos">Elementos de formato HTML</a>
+        <a href="#Ejemplos">Ejemplos de cada elemento</a>
+        <a href="#Video">video</a>
+        <a href="Enlaces.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Parrafos.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+    </nav>
+
+
+
+    <section id="Definicion">
+        <h1>¿Qué son los formatos en HTML?</h1>
+        <p>
+            Los formatos en HTML son etiquetas que permiten modificar el aspecto de un texto en una página web,
+            como por ejemplo, ponerlo en negrita, cursiva, subrayado, tacharlo, o cambiar su tamaño. Estas
+            etiquetas se utilizan para resaltar información, mejorar la lectura o llamar la atención del usuario.
+        </p>
+        <h3>Ejemplo:</h3>
+        <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="es"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Estilos básicos HTML&lt;/title&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+            &lt;p&gt;&lt;b&gt;Este texto esta en negrita&lt;/b&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;i&gt;Este texto esta en cursiva&lt;/i&gt;&lt;/p&gt;
+            &lt;p&gt;Esto es un&lt;sub&gt;índice&lt;/sub&gt; y &lt;sup&gt;super índice&lt;/sup&gt;&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt; 
+    </pre>
+        <img src="https://i.postimg.cc/mDq2LSzh/estilobasico.png" alt="Ejemplo Basico">
+    </section>
+
+    <section id="Elementos">
+
+        <h1>Elementos de formato HTML</h1>
+        <p>Los elementos de formato fueron diseñados para mostrar tipos especiales de texto:</p>
+        <ul>
+            <li><code>&lt;b&gt;</code> - Texto en negrita</li>
+            <li><code>&lt;strong&gt;</code> - Texto importante</li>
+            <li><code>&lt;i&gt;</code> - Texto en cursiva</li>
+            <li><code>&lt;em&gt;</code> - Texto destacado</li>
+            <li><code>&lt;mark&gt;</code> - Texto marcado</li>
+            <li><code>&lt;small&gt;</code> - Texto más pequeño</li>
+            <li><code>&lt;del&gt;</code> - Texto eliminado</li>
+            <li><code>&lt;ins&gt;</code> - Texto insertado</li>
+            <li><code>&lt;sub&gt;</code> - Texto en subíndice</li>
+            <li><code>&lt;sup&gt;</code> - Texto en superíndice</li>
+        </ul>
+    </section>
+
+    <section id="Ejemplos">
+
+        <h1> Ejemplos de cada elemento</h1>
+
+        <h3> Elementos HTML &lt;b&gt; y &lt;strong&gt;: </h3>
+
+        <ul>
+            <li><code>&lt;b&gt;</code> y <code>&lt;strong&gt;</code>: El elemento HTML <code>&lt;b&gt;</code> define
+                texto en negrita, sin ninguna importancia extra</li>
+        </ul>
+
+        <pre> &lt;b&gt;Este es un texto en negrita&lt;/b&gt; </pre>
+        <img src="https://i.postimg.cc/C5T5CNFX/negritas.png" alt="Ejemplo Basico">
+        <p>En este ejemplo, el texto "Este es un texto en negrita" aparece en negrita, sin que el navegador le asigne
+            ninguna importancia adicional.</p>
+
+        <ul>
+            <li><code>&lt;strong&gt;</code>: El elemento HTML <code>&lt;strong&gt;</code> define texto con gran
+                importancia. El contenido que se encuentra dentro de él normalmente se muestra en negrita.</li>
+        </ul>
+
+        <pre> &lt;strong&gt;Este en un texto importante&lt;/strong&gt;</pre>
+        <img src="https://i.postimg.cc/QxjxXVVQ/textoimportante.png" alt="Ejemplo Importante">
+        <p>En este ejemplo, el texto "Este es un texto importante" aparece en negrita, pero con una implicación
+            semántica de importancia.</p>
+
+        <h3> Elementos HTML &lt;i&gt; y &lt;em&gt;: </h3>
+
+        <ul>
+            <li><code>&lt;i&gt;</code> y <code>&lt;em&gt;</code>: El elemento HTML <code>&lt;i&gt;</code> define una
+                parte del texto en una voz o estilo alternativo. El contenido dentro de él normalmente se muestra en
+                cursiva.</li>
+        </ul>
+        <pre> &lt;i&gt;Este es un texto en cursiva&lt;/i&gt;</pre>
+        <img src="https://i.postimg.cc/TYbhPBcx/cursiva.png" alt="Ejemplo Cursiva">
+        <p>En este ejemplo, el texto "This text is italic" aparece en cursiva, indicando una voz o estilo alternativo.
+        </p>
+
+        <ul></ul>
+        <li><code>&lt;em&gt;</code>: El elemento HTML <code>&lt;em&gt;</code> define texto resaltado. El contenido que
+            se encuentra dentro de él normalmente se muestra en cursiva.</li>
+        </ul>
+        <pre> &lt;em&gt;Este texto esta resaltado&lt;/em&gt;</pre>
+        <img src="https://i.postimg.cc/4xNd1ngf/resaltado.png" alt="Ejemplo Resaltado">
+        <p>En este ejemplo, el texto "Este texto esta resaltado" aparece en cursiva, indicando un énfasis especial, que
+            un lector de pantalla podría pronunciar con énfasis adicional.</p>
+
+        <h3> Elementos HTML &lt;small&gt;: </h3>
+        <ul>
+            <li><code>&lt;small&gt;</code>: El elemento HTML <code>&lt;small&gt;</code> define un texto más pequeño.
+            </li>
+        </ul>
+        <pre> &lt;small&gt;Este es un texto más pequeño&lt;/small&gt;</pre>
+        <img src="https://i.postimg.cc/zXpD35R9/textopeque-o.png" alt="Ejemplo Texto Pequeño">
+        <p>En este ejemplo, el texto "Este es un texto más pequeño" aparece más pequeño que el texto normal.</p>
+
+        <h3> Elementos HTML &lt;mark&gt;: </h3>
+
+        <ul>
+            <li><code>&lt;mark&gt;</code>: El elemento HTML <code>&lt;mark&gt;</code> define el texto que debe marcarse
+                o resaltarse.</li>
+        </ul>
+        <pre> &lt;p&gt; No olvides comprar &lt;mark&gt; leche &lt;/mark&gt; hoy.&lt;/p&gt;</pre>
+        <img src="https://i.postimg.cc/vmT4GTqq/marcador.png" alt="Ejemplo Texto Marcado">
+        <p>En este ejemplo, el texto "leche" aparece resaltado en el contexto de una frase.</p>
+
+        <h3> Elementos HTML &lt;del&gt;: </h3>
+
+        <ul>
+            <li><code>&lt;del&gt;</code>: El elemento HTML <code>&lt;del&gt;</code> define el texto que se ha eliminado
+                de un documento.</li>
+        </ul>
+        <pre> &lt;p&gt; Mi color favorito es &lt;del&gt;azul&lt;/del&gt; rojo.&lt;/p&gt;</pre>
+        <img src="https://i.postimg.cc/P5xXwcWN/textorayado.png" alt="Ejemplo Texto Eliminado">
+        <p>En este ejemplo, el texto "azul" aparece tachado, indicando que ha sido eliminado y reemplazado por "rojo".
+        </p>
+
+        <h3> Elementos HTML &lt;ins&gt;: </h3>
+
+        <ul>
+            <li><code>&lt;ins&gt;</code>: El elemento HTML <code>&lt;ins&gt;</code> define el texto que se ha insertado
+                en un documento.</li>
+        </ul>
+        <pre> &lt;p&gt;Mi color favorito es &lt;del&gt; azul&lt;/del&gt; &lt;ins&gt; rojo&lt;/ins&gt;.&lt;/p&gt;</pre>
+        <img src="https://i.postimg.cc/xjzbkk0B/insertado.png" alt="Ejemplo Texto Insertado">
+        <p>En este ejemplo, el texto "rojo" aparece subrayado, indicando que es texto recién insertado en lugar de
+            "azul".</p>
+
+        <h3> Elementos HTML &lt;sub&gt;: </h3>
+
+        <ul>
+            <li><code>&lt;sub&gt;</code>: El elemento HTML <code>&lt;sub&gt;</code> define el texto en subíndice.</li>
+        </ul>
+        <pre> &lt;p&gt;Este es un texto &lt;sub&gt;subscrito&lt;/sub&gt; text.&lt;/p&gt;</pre>
+        <img src="https://i.postimg.cc/R02Z9Rnh/subscrito.png" alt="Ejemplo Texto Subíndice">
+        <p>En este ejemplo, el texto "subscrito" aparece en subíndice, útil para fórmulas como H<sub>2</sub>O.</p>
+
+        <h3> Elementos HTML &lt;sup&gt;: </h3>
+
+        <ul>
+            <li><code>&lt;sup&gt;</code>: El elemento HTML <code>&lt;sup&gt;</code> define el texto en superíndice.</li>
+        </ul>
+        <pre> &lt;p&gt;Este es un texto  &lt;sup&gt;superindice&lt;/sup&gt; text.&lt;/p&gt;</pre>
+        <img src="https://i.postimg.cc/DZsyzXqg/superindice.png" alt="Ejemplo Texto Superíndice">
+        <p>En este ejemplo, el texto "super indice" aparece en superíndice, útil para notas al pie o referencias como
+            WWW<sup>[1]</sup>.</p>
+    </section>
+
+    <section id="Video">
+        <div class="video-container">
+            <h1> Video: explicación de los formatos de HTML </h1>
+            <iframe src="https://www.youtube.com/embed/7FqQLqNIEY8" allowfullscreen>
+        </div>
+        </iframe>
+
+    </section>
+
+    <footer>
+        <p> &copy; 2024 Desarrollado por Beto y Diana </p>
+    </footer>
+
+</body>
+
+</html>

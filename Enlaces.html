@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 40px;
+            height: auto;
+            margin-right: 8px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+
+
+        section h2 {
+            color: rgb(11, 11, 11);
+            font-family: 'Bahnschrift Light';
+        }
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        section p {
+            text-align: justify;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section img {
+            width: 400px;
+            border: 2px solid rgb(38, 64, 37);
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button>
+            <h1>Enlaces de HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#Definicion">Definición</a>
+        <a href="#sintaxis">Sintaxis</a>
+        <a href="#Video">video</a>
+        <a href="imagenes.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Formatos.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+    </nav>
+
+    <section id="Definicion">
+        <h1>Definicion</h1>
+        <p>Los enlaces HTML, también conocidos como hipervínculos, son elementos de una página web que permiten
+            a los usuarios saltar a otro contenido al hacer clic en ellos. Los enlaces pueden ser texto, imágenes
+            u otros elementos HTML.
+            Para insertar un enlace en HTML se utiliza el comando &lt; A &gt; (de anchor), que requiere de
+            ciertos parámetros para funcionar. Uno de estos parámetros es HREF, que indica hacia dónde debe
+            ir el enlace.
+        </p>
+    </section>
+
+    <section id="sintaxis">
+
+        <h1>Enlaces HTML - Sintaxis</h1>
+
+        <p>La etiqueta HTML <code>&lt;a&gt;</code> define un hipervínculo. Tiene la siguiente sintaxis:</p>
+
+        <pre> &lt;a href="url"&gt;Texto del enlace&lt;/a&gt; </pre>
+
+        <p>El atributo más importante del elemento <code>&lt;a&gt;</code> es el atributo <code>href</code>, que indica
+            el destino del enlace. El texto del enlace es la parte que será visible para el lector. Al hacer clic en él,
+            el usuario será enviado a la URL especificada.</p>
+
+        <h3>Ejemplo</h3>
+        <pre> &lt;a href="https://www.w3schools.com/"&gt;Visita W3Schools.com!&lt;/a&gt; </pre>
+
+        <img src="https://i.postimg.cc/mgbc68QG/link.png" alt="Ejemplo Basico">
+
+        <p>De forma predeterminada, los enlaces aparecen de la siguiente manera en los navegadores:</p>
+        <ul>
+            <li>Un enlace no visitado está subrayado y en azul.</li>
+            <li>Un enlace visitado está subrayado y en color morado.</li>
+            <li>Un enlace activo está subrayado y en rojo.</li>
+        </ul>
+
+        <h2>Enlaces HTML - El atributo target</h2>
+        <p>Por defecto, la página vinculada se mostrará en la ventana actual del navegador. Para cambiar esto, se
+            utiliza el atributo <code>target</code>, que especifica dónde abrir el documento vinculado.</p>
+        <ul>
+            <li><code>_self</code> - Predeterminado. Abre el documento en la misma ventana o pestaña.</li>
+            <li><code>_blank</code> - Abre el documento en una nueva ventana o pestaña.</li>
+            <li><code>_parent</code> - Abre el documento en el marco principal.</li>
+            <li><code>_top</code> - Abre el documento en el cuerpo completo de la ventana.</li>
+        </ul>
+
+        <h3>Ejemplo</h3>
+        <pre> &lt;a href="https://www.w3schools.com/" target="_blank"&gt;Visita W3Schools!&lt;/a&gt; </pre>
+        <img src="https://i.postimg.cc/YSMvZ8YH/atributotarget.png" alt="Ejemplo Basico">
+
+        <h2>URL absolutas vs. URL relativas</h2>
+        <p>Se pueden utilizar URLs absolutas o relativas en el atributo <code>href</code>.</p>
+
+        <h3>Ejemplo de URLs absolutas</h3>
+        <pre> &lt;a href="https://www.w3.org/"&gt;W3C&lt;/a&gt;
+ &lt;a href="https://www.google.com/"&gt;Google&lt;/a&gt; </pre>
+
+        <h3>Ejemplo de URLs relativas</h3>
+        <pre> &lt;a href="html_images.asp"&gt;Imágenes HTML&lt;/a&gt;
+ &lt;a href="/css/default.asp"&gt;Tutorial de CSS&lt;/a&gt; </pre>
+        <img src="https://i.postimg.cc/hGQKCd3B/urlar.png" alt="Ejemplo Basico">
+
+        <h2>Enlaces HTML: usar una imagen como enlace</h2>
+        <p>Para usar una imagen como enlace, coloca la etiqueta <code>&lt;img&gt;</code> dentro de la etiqueta
+            <code>&lt;a&gt;</code>:
+        </p>
+        <h3>Ejemplo</h3>
+        <pre> &lt;a href="default.asp"&gt;
+ &lt;img src="smiley.gif" alt="Tutorial HTML" style="width:42px;height:42px;"&gt;
+ &lt;/a&gt; </pre>
+        <img src="https://i.postimg.cc/HLYLBn1W/enlaceimg.png" alt="Ejemplo Basico">
+
+        <h2>Enlace a una dirección de correo electrónico</h2>
+        <p>Utiliza <code>mailto:</code> en el atributo <code>href</code> para crear un enlace que abra el programa de
+            correo electrónico del usuario:</p>
+        <h3>Ejemplo</h3>
+        <pre> &lt;a href="mailto:someone@example.com"&gt;Enviar correo&lt;/a&gt </pre>
+        <img src="https://i.postimg.cc/QtVdZzMR/enviarcorreo.png" alt="Ejemplo Basico">
+
+        <h2>Botón como enlace</h2>
+        <p>Para utilizar un botón HTML como enlace, es necesario agregar código JavaScript.</p>
+        <h3>Ejemplo</h3>
+        <pre> &lt;button onclick="document.location='default.asp'"&gt;Tutorial HTML&lt;/button&gt; </pre>
+        <img src="https://i.postimg.cc/76QbCkcH/botonenlaces.png" alt="Ejemplo Basico">
+
+        <h2>Títulos de enlaces</h2>
+        <p>El atributo <code>title</code> especifica información adicional sobre un elemento y se muestra como un texto
+            emergente cuando el ratón pasa sobre el enlace.</p>
+        <h3>Ejemplo</h3>
+        <pre> &lt;a href="https://www.w3schools.com/html/" title="Ir a la sección HTML de W3Schools"&gt;Visita nuestro Tutorial de HTML&lt;/a&gt; </pre>
+        <img src="https://i.postimg.cc/Gm5cJQKK/tituloenlaces.png" alt="Ejemplo Basico">
+    </section>
+
+    <section id="Video">
+        <div class="video-container">
+            <h1> Video: explicación de los enlaces de HTML </h1>
+            <iframe src="https://www.youtube.com/embed/HA6bByKdAQM" allowfullscreen>
+        </div>
+        </iframe>
+
+    </section>
+
+    <footer>
+        <p> &copy; 2024 Desarrollado por Diana y Beto </p>
+    </footer>
+
+</body>
+
+</html>

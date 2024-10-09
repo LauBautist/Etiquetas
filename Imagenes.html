@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rgb(233, 244, 240);
+        }
+
+        header {
+            background-color: rgb(200, 226, 217);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header button {
+            background-color: rgb(200, 226, 217);
+            border: none;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 2.5em;
+            transition: transform 0.3s ease;
+        }
+
+        header button:hover {
+            transform: translateY(-10px);
+        }
+
+        header h1 {
+            font-family: 'Super Chunky', sans-serif;
+            color: rgb(38, 64, 37);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(148, 185, 145);
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Bahnschrift Light';
+        }
+
+        nav a:hover {
+            color: rgb(38, 64, 37);
+            transform: scale(1.1);
+
+        }
+
+        nav img {
+            vertical-align: middle;
+            width: 40px;
+            /* Tamaño de los iconos */
+            height: auto;
+            margin-right: 8px;
+            /* Espacio entre la imagen y el texto */
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            /* Fondo blanco para las secciones */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+
+
+        section h1 {
+            color: rgb(38, 64, 37);
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgb(148, 185, 145);
+            padding-bottom: 10px;
+        }
+
+        section p {
+            text-align: justify;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(38, 64, 37);
+            margin-top: 10px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: rgb(200, 226, 217);
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgb(148, 185, 145);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+                font-size: 1em;
+            }
+
+            section {
+                padding: 15px;
+                max-width: 100%;
+            }
+
+            pre {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            nav img {
+                width: 30px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 3px 0;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            pre {
+                font-size: 0.85em;
+            }
+
+
+            footer {
+                font-size: 0.85em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+            border: 3px solid rgb(38, 64, 37);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .imagenes {
+            width: 100%;
+            /* Asegura que el contenedor ocupa todo el ancho disponible */
+            display: flex;
+            flex-wrap: wrap;
+            /* Permite que las imágenes se ajusten en varias filas */
+            justify-content: center;
+            /* Centra las imágenes */
+            gap: 15px;
+            /* Espacio entre imágenes */
+            padding: 20px;
+        }
+
+        .imagenes img {
+            max-width: 100%;
+            /* Las imágenes no excederán el ancho del contenedor */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+            border-radius: 10px;
+            /* Bordes redondeados para un mejor estilo */
+            width: 250px;
+            /* Cambia este valor según tus necesidades */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #ejemplos {
+            padding: 20px;
+            /* Espacio interno */
+        }
+
+        #ejemplos img {
+            max-width: 100%;
+            /* Las imágenes no exceden el ancho del contenedor */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+            border-radius: 10px;
+            /* Opcional: bordes redondeados */
+            margin: 10px 0;
+            /* Espacio entre imágenes */
+        }
+
+        #sintaxis {
+            padding: 20px;
+            /* Espacio interno */
+        }
+
+        #sintaxis img {
+            max-width: 100%;
+            /* Las imágenes no exceden el ancho del contenedor */
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+            border-radius: 10px;
+            /* Opcional: bordes redondeados */
+            margin: 10px 0;
+            /* Espacio entre imágenes */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button>
+            <h1>Imagenes de HTML</h1>
+        </button>
+    </header>
+
+    <nav>
+        <a href="index.html"> <img src="https://i.postimg.cc/Sxr9ywys/icono-Inicio.png" alt="iconoInicio"> </a>
+        <a href="#inicioimg">Imagenes</a>
+        <a href="#ejemplos">Ejemplos</a>
+        <a href="#sintaxis">Sintaxis</a>
+        <a href="#Video">Video</a>
+        <a href="Tablas.html"> <img src="https://i.postimg.cc/bvZwKMr4/siguiente.png" alt="iconoSiguiente"> </a>
+        <a href="Enlaces.html"> <img src="https://i.postimg.cc/2S4q0gqG/anterior.png" alt="iconoAnterior"> </a>
+    </nav>
+
+    <section id="inicioimg">
+        <h1> Imagenes de HTML</h1>
+        <p> Las imágenes pueden mejorar el diseño y la apariencia de una página web </p>
+        <div class="imagenes">
+            <img src="https://i.postimg.cc/SQCJSwdh/paisaje.jpg" alt="Ejemplo Basico">
+            <img src="https://i.postimg.cc/FFM3GyW9/foto.jpg" alt="Ejemplo Basico">
+            <img src="https://i.postimg.cc/Y9mjmVwQ/montana.jpg" alt="Ejemplo Basico">
+        </div>
+    </section>
+
+    <section id="ejemplos">
+        <h1> Ejemplos </h1>
+        <p>A continuación se muestra un ejemplo básico de cómo utilizar la etiqueta <code>&lt;img&gt;</code> en HTML:
+        </p>
+        <pre> &lt;img src="pic_trulli.jpg" alt="Trulli Italiano"&gt;</pre>
+        <img src="https://i.postimg.cc/fTvyXm1q/pic-trulli.jpg" alt="Ejemplo Basico">
+        <p>En este caso, <code>src</code> define la ubicación del archivo de la imagen, y <code>alt</code> proporciona
+            un texto alternativo que se mostrará si la imagen no puede cargarse.</p>
+
+        <pre> &lt;img src="img_girl.jpg" alt="Chica con chaqueta"&gt;</pre>
+        <img src="https://i.postimg.cc/rsxd7Hnq/img-girl.jpg" alt="Ejemplo Basico">
+        <p>En este ejemplo, <code>src</code> indica la ubicación de la imagen, mientras que <code>alt</code> es el texto
+            alternativo que describe la imagen como "Chica con chaqueta" si no puede cargarse.</p>
+
+        <pre> &lt;img src="img_chania.jpg" alt="Flores en Chania"&gt;</pre>
+        <img src="https://i.postimg.cc/xCkN38LJ/img-chania.jpg" alt="Ejemplo Basico">
+        <p>En este ejemplo, <code>src</code> indica la ubicación de la imagen, mientras que <code>alt</code> es el texto
+            alternativo que describe la imagen como "Flores en Chania" si no puede cargarse.</p>
+    </section>
+
+    <section id="sintaxis">
+        <h1>Sintaxis de imágenes HTML</h1>
+        <p>La <code>&lt;img&gt;</code> etiqueta HTML se utiliza para incrustar una imagen en una página web.</p>
+        <p>Técnicamente, las imágenes no se insertan en una página web, sino que se vinculan a páginas web. La
+            <code>&lt;img&gt;</code> etiqueta crea un espacio de almacenamiento para la imagen a la que se hace
+            referencia.
+        </p>
+        <p>La <code>&lt;img&gt;</code> etiqueta está vacía, contiene solo atributos y no tiene una etiqueta de cierre.
+        </p>
+
+        <h3>Atributos obligatorios de la etiqueta <code>&lt;img&gt;</code>:</h3>
+        <ol>
+            <li><code>src</code> - Especifica la ruta a la imagen.</li>
+            <li><code>alt</code> - Especifica un texto alternativo para la imagen.</li>
+        </ol>
+
+        <pre> &lt;img src="url" alt="alternatetext"&gt; </pre>
+        <p>En este ejemplo, <code>src</code> es el atributo que especifica la URL de la imagen, y <code>alt</code> es el
+            texto alternativo que se mostrará si la imagen no se puede cargar.</p>
+
+        <h3> El atributo src </h3>
+
+        <p>
+            El atributo requerido <code>src</code> especifica la ruta (URL) a la imagen.
+        </p>
+
+        <p>
+            Nota: Cuando se carga una página web, es el navegador el que, en ese momento, obtiene la imagen de un
+            servidor web y la inserta en la página.
+            Por lo tanto, asegúrese de que la imagen permanezca en el mismo lugar en relación con la página web; de lo
+            contrario, sus visitantes verán un icono de enlace roto.
+            El icono de enlace roto y el <code>alt</code> texto se muestran si el navegador no puede encontrar la
+            imagen.
+        </p>
+
+        <h2>Atributo <code>alt</code></h2>
+        <p>El atributo <code>alt</code> proporciona un texto alternativo para una imagen en caso de que no pueda verse
+            por alguna razón (conexión lenta, error en el atributo <code>src</code> o si el usuario utiliza un lector de
+            pantalla).</p>
+        <p>El valor del atributo <code>alt</code> debe describir la imagen:</p>
+        <pre> &lt;img src="img_chania.jpg" alt="Flores en Chania"&gt; </pre>
+
+        <p>Si el navegador no encuentra una imagen, mostrará el valor del atributo <code>alt</code>:</p>
+        <pre> &lt;img src="wrongname.gif" alt="Flores en Chania"&gt;</pre>
+
+        <h2>Tamaño de la imagen: ancho y alto</h2>
+        <p>Puedes utilizar el atributo <code>style</code> para especificar el ancho y la altura de una imagen:</p>
+        <pre> &lt;img src="img_paisaje.jpg" alt="Paisaje" style="width:150px;height:150px;"&gt; </pre>
+        <p>Alternativamente, puedes usar los atributos <code>width</code> y <code>height</code>:</p>
+        <pre> &lt;img src="img_paisaje.jpg" alt="paisaje" width="150" height="150"&gt; </pre>
+        <p>Es importante especificar el ancho y la altura de las imágenes para evitar que la página parpadee mientras
+            las imágenes se cargan.</p>
+        <img src="https://i.postimg.cc/SQCJSwdh/paisaje.jpg" alt="Ejemplo Basico">
+
+        <h2>Imágenes en otra carpeta</h2>
+        <p>Si tienes tus imágenes en una subcarpeta, debes incluir el nombre de la carpeta en el atributo
+            <code>src</code>:
+        </p>
+        <pre> &lt;img src="/imagenes/html5.gif" alt="Icono de HTML5" style="width:128px;height:128px;"&gt; </pre>
+
+        <h2>Imágenes en otro servidor o sitio web</h2>
+        <p>Para apuntar a una imagen en otro servidor, necesitas especificar una URL completa en el atributo
+            <code>src</code>:
+        </p>
+        <pre> &lt;img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"&gt; </pre>
+        <p>Las imágenes externas pueden estar sujetas a derechos de autor. Asegúrate de obtener permiso antes de
+            usarlas.</p>
+
+        <h2>Imágenes animadas</h2>
+        <p>HTML permite el uso de GIF animados:</p>
+        <pre> &lt;img src="programming.gif" alt="Hombre programando" style="width:48px;height:48px;"&gt; </pre>
+
+        <h2>Imagen como enlace</h2>
+        <p>Para usar una imagen como enlace, coloca la etiqueta <code>&lt;img&gt;</code> dentro de la etiqueta
+            <code>&lt;a&gt;</code>:
+        </p>
+        <pre> &lt;a href="default.asp"&gt;
+ &lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"&gt;
+ &lt;/a&gt; </pre>
+
+        <h2>Imagen flotante</h2>
+        <p>Utiliza la propiedad <code>float</code> en CSS para hacer que una imagen flote a la derecha o a la izquierda
+            del texto:</p>
+        <pre> &lt;p&gt;&lt;img src="smiley.gif" alt="Carita feliz" style="float:right;width:42px;height:42px;"&gt;
+ El texto se ajusta a la izquierda de la imagen.&lt;/p&gt; </pre>
+        <pre> &lt;p&gt;&lt;img src="smiley.gif" alt="Carita feliz" style="float:left;width:42px;height:42px;"&gt;
+ El texto se ajusta a la derecha de la imagen.&lt;/p&gt; </pre>
+        <img src="https://i.postimg.cc/vBpgqyvP/img-flotante.png" alt="Ejemplo Basico" style="width:500px;height:auto;">
+    </section>
+
+    <section id="Video">
+        <h1> Video: explicación de las imagenes de HTML </h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/FmoYRiepmOE" allowfullscreen>
+        </div>
+        </iframe>
+    </section>
+
+    <footer>
+        <p> &copy; 2024 Desarrollado por Beto y Diana </p>
+    </footer>
+
+</body>
+
+</html>
